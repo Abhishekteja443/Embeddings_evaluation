@@ -1,0 +1,4 @@
+Hit@1,Hit@3,Hit@5,MRR,AvgCos_Relevant,Model,Embed_dim,Time_sec
+0.8,1.0,1.0,0.9,0.7093467,bge-large-en-v1.5,1024,10.3
+0.8,1.0,1.0,0.9,0.7084681,Qwen3-Embedding-8B,4096,91.4
+0.8,0.9,1.0,0.8583333333333332,0.65357554,llama-embed-nemotron-8b,4096,73.7
