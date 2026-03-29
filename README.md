@@ -1,4 +1,4 @@
-# NEN Embedding Evaluation
+# Embeddings Evaluation
 
 This repository evaluates embeddings for the NEN schema by converting ontology triples into natural language sentences, embedding them with different models, and assessing retrieval quality using competency questions.
 
