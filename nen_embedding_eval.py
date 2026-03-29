@@ -22,12 +22,23 @@ Requirements (install before running):
 import os
 import time
 import warnings
+import logging
 import numpy as np
 import pandas as pd
 from tabulate import tabulate
 from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("nen_embedding_eval.log", encoding="utf-8"),
+    ],
+)
+logger = logging.getLogger(__name__)
 
 # ─────────────────────────────────────────────
 # 1. LOAD NEN SCHEMA
@@ -177,7 +188,7 @@ def cosine_similarity_matrix(a: np.ndarray, b: np.ndarray) -> np.ndarray:
 def load_sentence_transformer(model_name: str):
     """Load a model via sentence-transformers (works for bge and many HF models)."""
     from sentence_transformers import SentenceTransformer
-    print(f"  Loading {model_name} via SentenceTransformer ...")
+    logger.info(f"  Loading {model_name} via SentenceTransformer ...")
     model = SentenceTransformer(model_name, trust_remote_code=True)
     return model
 
@@ -191,7 +202,7 @@ def load_hf_model(model_name: str):
     """Load a causal/encoder model via HuggingFace transformers with optional 4-bit quant."""
     import torch
     from transformers import AutoTokenizer, AutoModel
-    print(f"  Loading {model_name} via HuggingFace transformers ...")
+    logger.info(f"  Loading {model_name} via HuggingFace transformers ...")
     try:
         from transformers import BitsAndBytesConfig
         bnb_config = BitsAndBytesConfig(load_in_4bit=True,
@@ -199,12 +210,12 @@ def load_hf_model(model_name: str):
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         model = AutoModel.from_pretrained(model_name, quantization_config=bnb_config,
                                           device_map="auto", trust_remote_code=True)
-        print("  ✓ Loaded with 4-bit quantization")
+        logger.info("  ✓ Loaded with 4-bit quantization")
     except Exception:
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         model = AutoModel.from_pretrained(model_name, device_map="auto",
                                           torch_dtype="auto", trust_remote_code=True)
-        print("  ✓ Loaded in full precision (no quantization)")
+        logger.info("  ✓ Loaded in full precision (no quantization)")
     model.eval()
     return tokenizer, model
 
@@ -310,9 +321,9 @@ MODELS = [
 # ─────────────────────────────────────────────
 
 def run_evaluation(nen_path: str = NEN_CSV_PATH):
-    print("=" * 65)
-    print("  NEN SCHEMA EMBEDDING EVALUATION")
-    print("=" * 65)
+    logger.info("=" * 65)
+    logger.info("  NEN SCHEMA EMBEDDING EVALUATION")
+    logger.info("=" * 65)
 
     # ── Load & prepare data ──────────────────────────────────────
     df = load_nen(nen_path)
@@ -320,14 +331,13 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
     doc_sentences = [d["sentence"] for d in docs]
     doc_ids       = [d["id"]       for d in docs]
 
-    print(f"\n✓ Loaded {len(docs)} triples from NEN schema")
-    print(f"✓ Prepared {len(COMPETENCY_QUESTIONS)} competency questions\n")
+    logger.info(f"\n✓ Loaded {len(docs)} triples from NEN schema")
+    logger.info(f"✓ Prepared {len(COMPETENCY_QUESTIONS)} competency questions\n")
 
     # Preview queries
-    print("── Competency Questions (Test Queries) ──────────────────")
+    logger.info("── Competency Questions (Test Queries) ──────────────────")
     for i, cq in enumerate(COMPETENCY_QUESTIONS, 1):
-        print(f"  CQ{i:02d}: {cq['query']}")
-    print()
+        logger.info(f"  CQ{i:02d}: {cq['query']}")
 
     results_summary = []
 
@@ -337,9 +347,9 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
         backend = model_cfg["backend"]
         q_prefix = model_cfg.get("query_prefix", "")
 
-        print("─" * 65)
-        print(f"  MODEL: {name}")
-        print("─" * 65)
+        logger.info("─" * 65)
+        logger.info(f"  MODEL: {name}")
+        logger.info("─" * 65)
 
         t0 = time.time()
 
@@ -348,20 +358,21 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
                 model = load_sentence_transformer(hf_id)
 
                 # Embed documents
-                print("  Embedding schema triples ...")
+                logger.info("  Embedding schema triples ...")
                 doc_embeddings = embed_with_sentence_transformer(model, doc_sentences)
+                logger.info("%d document embeddings with dimension %d", len(doc_embeddings), doc_embeddings.shape[1])
 
                 # Embed queries (with optional prefix)
                 query_texts = [q_prefix + cq["query"] for cq in COMPETENCY_QUESTIONS]
-                print("  Embedding competency questions ...")
+                logger.info("  Embedding competency questions ...")
                 query_embeddings = embed_with_sentence_transformer(model, query_texts)
 
             else:   # hf fallback
                 tokenizer, model = load_hf_model(hf_id)
-                print("  Embedding schema triples ...")
+                logger.info("  Embedding schema triples ...")
                 doc_embeddings = embed_with_hf(tokenizer, model, doc_sentences)
                 query_texts = [q_prefix + cq["query"] for cq in COMPETENCY_QUESTIONS]
-                print("  Embedding competency questions ...")
+                logger.info("  Embedding competency questions ...")
                 query_embeddings = embed_with_hf(tokenizer, model, query_texts)
 
             elapsed = time.time() - t0
@@ -376,33 +387,33 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
             metrics["Time_sec"]      = round(elapsed, 1)
             results_summary.append(metrics)
 
-            print(f"\n  Results for {name}:")
+            logger.info(f"\n  Results for {name}:")
             for k, v in metrics.items():
                 if k not in ("Model",):
-                    print(f"    {k:<22} {v if isinstance(v, (int,str)) else f'{v:.4f}'}")
+                    logger.info("    %s %s", f"{k:<22}", v if isinstance(v, (int, str)) else f"{v:.4f}")
 
             # ── Per-query detail ──────────────────────────────────
-            print(f"\n  Per-Query Cosine Similarity (top-3 retrieved):")
+            logger.info(f"\n  Per-Query Cosine Similarity (top-3 retrieved):")
             for q_idx, cq in enumerate(COMPETENCY_QUESTIONS):
                 sims = sim_matrix[q_idx]
                 top3_idx = np.argsort(sims)[::-1][:3]
-                print(f"\n  CQ{q_idx+1:02d}: {cq['query']}")
+                logger.info(f"\n  CQ{q_idx+1:02d}: {cq['query']}")
                 for rank, idx in enumerate(top3_idx, 1):
                     hit = "✓" if doc_ids[idx] in cq["relevant"] else " "
-                    print(f"    {rank}. [{hit}] {doc_sentences[idx][:70]:<70}  sim={sims[idx]:.4f}")
+                    logger.info("    %d. [%s] %s  sim=%.4f", rank, hit, doc_sentences[idx][:70], sims[idx])
 
         except Exception as e:
-            print(f"  ✗ ERROR loading/running {name}: {e}")
+            logger.error("  ✗ ERROR loading/running %s: %s", name, e)
             results_summary.append({"Model": name, "Error": str(e)})
 
-        print()
+        logger.info("")
 
     # ─────────────────────────────────────────────────────────────
     # 7. FINAL SUMMARY TABLE
     # ─────────────────────────────────────────────────────────────
-    print("=" * 65)
-    print("  FINAL COMPARISON SUMMARY")
-    print("=" * 65)
+    logger.info("=" * 65)
+    logger.info("  FINAL COMPARISON SUMMARY")
+    logger.info("=" * 65)
 
     table_rows = []
     headers = ["Model", "Hit@1", "Hit@3", "Hit@5", "MRR", "AvgCos_Relevant", "Embed_dim", "Time(s)"]
@@ -422,9 +433,9 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
                 r["Time_sec"],
             ])
 
-    print(tabulate(table_rows, headers=headers, tablefmt="rounded_outline"))
+    logger.info("%s", tabulate(table_rows, headers=headers, tablefmt="rounded_outline"))
 
-    print("""
+    logger.info("""
   Metric guide
   ────────────
   Hit@K          : Fraction of queries where ≥1 relevant triple
@@ -440,7 +451,7 @@ def run_evaluation(nen_path: str = NEN_CSV_PATH):
     # Save results CSV
     out_path = "nen_eval_results.csv"
     pd.DataFrame(results_summary).to_csv(out_path, index=False)
-    print(f"  ✓ Results saved to {out_path}")
+    logger.info("  ✓ Results saved to %s", out_path)
 
 
 if __name__ == "__main__":
