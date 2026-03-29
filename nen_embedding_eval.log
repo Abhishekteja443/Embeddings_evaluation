@@ -1,0 +1,345 @@
+2026-03-29 17:49:47,405 INFO =================================================================
+2026-03-29 17:49:47,405 INFO   NEN SCHEMA EMBEDDING EVALUATION
+2026-03-29 17:49:47,405 INFO =================================================================
+2026-03-29 17:49:47,409 INFO 
+✓ Loaded 43 triples from NEN schema
+2026-03-29 17:49:47,410 INFO ✓ Prepared 10 competency questions
+
+2026-03-29 17:49:47,410 INFO ── Competency Questions (Test Queries) ──────────────────
+2026-03-29 17:49:47,410 INFO   CQ01: What records does an Agent have?
+2026-03-29 17:49:47,410 INFO   CQ02: What is the structure of a NameRecord?
+2026-03-29 17:49:47,410 INFO   CQ03: How is time or date information modelled?
+2026-03-29 17:49:47,410 INFO   CQ04: What properties does an Event have?
+2026-03-29 17:49:47,410 INFO   CQ05: Which entity types are subclasses of AgentRecord?
+2026-03-29 17:49:47,410 INFO   CQ06: How are external identifiers or references stored?
+2026-03-29 17:49:47,410 INFO   CQ07: How is a person's occupation recorded?
+2026-03-29 17:49:47,410 INFO   CQ08: What are the name components of a NameVariant?
+2026-03-29 17:49:47,410 INFO   CQ09: How are relationships between agents modelled?
+2026-03-29 17:49:47,410 INFO   CQ10: What role does a participant play in an event?
+2026-03-29 17:49:47,410 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:49:47,410 INFO   MODEL: bge-large-en-v1.5
+2026-03-29 17:49:47,410 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:49:52,497 INFO   Loading BAAI/bge-large-en-v1.5 via SentenceTransformer ...
+2026-03-29 17:49:52,499 INFO Use pytorch device_name: cpu
+2026-03-29 17:49:52,506 INFO Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2026-03-29 17:49:52,653 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,667 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,702 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,712 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,747 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,759 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,793 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,804 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/README.md "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,839 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,851 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,895 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:52,907 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:52,955 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:53,000 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:53,011 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:53,678 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:53,689 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:53,739 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:53,749 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:53,792 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-large-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:53,841 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-large-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 17:49:53,943 INFO HTTP Request: HEAD https://huggingface.co/BAAI/bge-large-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:53,954 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-large-en-v1.5/d4aa6901d3a41ba39fb536a557fa166f842b0e09/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:54,002 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-large-en-v1.5 "HTTP/1.1 200 OK"
+2026-03-29 17:49:54,034 INFO   Embedding schema triples ...
+2026-03-29 17:49:56,486 INFO 43 document embeddings with dimension 1024
+2026-03-29 17:49:56,486 INFO   Embedding competency questions ...
+2026-03-29 17:49:57,075 INFO 
+  Results for bge-large-en-v1.5:
+2026-03-29 17:49:57,075 INFO     Hit@1                  0.8000
+2026-03-29 17:49:57,075 INFO     Hit@3                  1.0000
+2026-03-29 17:49:57,075 INFO     Hit@5                  1.0000
+2026-03-29 17:49:57,075 INFO     MRR                    0.9000
+2026-03-29 17:49:57,075 INFO     AvgCos_Relevant        0.7093
+2026-03-29 17:49:57,075 INFO     Embed_dim              1024
+2026-03-29 17:49:57,075 INFO     Time_sec               9.7000
+2026-03-29 17:49:57,076 INFO 
+  Per-Query Cosine Similarity (top-3 retrieved):
+2026-03-29 17:49:57,076 INFO 
+  CQ01: What records does an Agent have?
+2026-03-29 17:49:57,076 INFO     1. [✓] Agent has an agent record called AgentRecord.  sim=0.8457
+2026-03-29 17:49:57,076 INFO     2. [ ] InterAgentRelationshipRecord is a relationship originating from Agent.  sim=0.6873
+2026-03-29 17:49:57,076 INFO     3. [ ] InterAgentRelationshipRecord is a relationship directed to Agent.  sim=0.6821
+2026-03-29 17:49:57,076 INFO 
+  CQ02: What is the structure of a NameRecord?
+2026-03-29 17:49:57,076 INFO     1. [✓] NameRecord is a subclass of AgentRecord.  sim=0.7450
+2026-03-29 17:49:57,076 INFO     2. [✓] NameRecord has a name variant of type NameVariant.  sim=0.7275
+2026-03-29 17:49:57,076 INFO     3. [✓] NameRecord has a preferred name variant of type NameVariant.  sim=0.7184
+2026-03-29 17:49:57,076 INFO 
+  CQ03: How is time or date information modelled?
+2026-03-29 17:49:57,077 INFO     1. [ ] AgentRecord contains temporal extent with value xsd:date.  sim=0.6287
+2026-03-29 17:49:57,077 INFO     2. [✓] Timespan starts at xsd:date.  sim=0.6051
+2026-03-29 17:49:57,077 INFO     3. [✓] TemporalExtent contains xsd:date.  sim=0.6024
+2026-03-29 17:49:57,077 INFO 
+  CQ04: What properties does an Event have?
+2026-03-29 17:49:57,077 INFO     1. [✓] Event has an event type defined in EventTypes.txt.  sim=0.7147
+2026-03-29 17:49:57,077 INFO     2. [✓] Event has a name which is a xsd:string.  sim=0.7059
+2026-03-29 17:49:57,077 INFO     3. [✓] Event is a sub-event of Event.  sim=0.6937
+2026-03-29 17:49:57,077 INFO 
+  CQ05: Which entity types are subclasses of AgentRecord?
+2026-03-29 17:49:57,077 INFO     1. [✓] NameRecord is a subclass of AgentRecord.  sim=0.8230
+2026-03-29 17:49:57,077 INFO     2. [✓] InterAgentRelationshipRecord is a subclass of AgentRecord.  sim=0.8192
+2026-03-29 17:49:57,078 INFO     3. [✓] ParticipantRoleRecord is a subclass of AgentRecord.  sim=0.8166
+2026-03-29 17:49:57,078 INFO 
+  CQ06: How are external identifiers or references stored?
+2026-03-29 17:49:57,078 INFO     1. [✓] ExternalReference refers to ExternalReferent.  sim=0.7262
+2026-03-29 17:49:57,078 INFO     2. [✓] ExternalReference is identified with an ID of type xsd:string.  sim=0.7192
+2026-03-29 17:49:57,078 INFO     3. [✓] Event has an external reference of type ExternalReference.  sim=0.6770
+2026-03-29 17:49:57,078 INFO 
+  CQ07: How is a person's occupation recorded?
+2026-03-29 17:49:57,078 INFO     1. [✓] OccupationRecord is a subclass of AgentRecord.  sim=0.7190
+2026-03-29 17:49:57,078 INFO     2. [✓] OccupationRecord has a value of type Occupations.txt.  sim=0.7189
+2026-03-29 17:49:57,078 INFO     3. [ ] Agent has an agent record called AgentRecord.  sim=0.5894
+2026-03-29 17:49:57,078 INFO 
+  CQ08: What are the name components of a NameVariant?
+2026-03-29 17:49:57,078 INFO     1. [ ] NameRecord has a name variant of type NameVariant.  sim=0.7717
+2026-03-29 17:49:57,079 INFO     2. [✓] NameVariant stores a full name as a xsd:string.  sim=0.7590
+2026-03-29 17:49:57,079 INFO     3. [✓] NameVariant stores a first name as a xsd:string.  sim=0.7585
+2026-03-29 17:49:57,079 INFO 
+  CQ09: How are relationships between agents modelled?
+2026-03-29 17:49:57,079 INFO     1. [✓] InterAgentRelationshipRecord has an inter-agent relationship type from  sim=0.6904
+2026-03-29 17:49:57,079 INFO     2. [✓] InterAgentRelationshipRecord is a relationship directed to Agent.  sim=0.6895
+2026-03-29 17:49:57,079 INFO     3. [✓] InterAgentRelationshipRecord is a relationship originating from Agent.  sim=0.6831
+2026-03-29 17:49:57,079 INFO 
+  CQ10: What role does a participant play in an event?
+2026-03-29 17:49:57,079 INFO     1. [✓] Event provides a participant role of type ParticipantRoleRecord.  sim=0.8248
+2026-03-29 17:49:57,079 INFO     2. [✓] ParticipantRoleRecord has its role provided by Event.  sim=0.7986
+2026-03-29 17:49:57,079 INFO     3. [✓] ParticipantRoleRecord has a participant role type from ParticipantRole  sim=0.7026
+2026-03-29 17:49:57,080 INFO 
+2026-03-29 17:49:57,080 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:49:57,080 INFO   MODEL: Qwen3-Embedding-8B
+2026-03-29 17:49:57,080 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:49:57,080 INFO   Loading Qwen/Qwen3-Embedding-8B via SentenceTransformer ...
+2026-03-29 17:49:57,084 INFO Use pytorch device_name: cpu
+2026-03-29 17:49:57,084 INFO Load pretrained SentenceTransformer: Qwen/Qwen3-Embedding-8B
+2026-03-29 17:49:57,120 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,135 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:57,172 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,183 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:57,222 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,236 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:57,271 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,282 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/README.md "HTTP/1.1 200 OK"
+2026-03-29 17:49:57,329 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,339 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:57,381 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_bert_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,423 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_roberta_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,458 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_distilbert_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,512 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_camembert_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,566 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_albert_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,602 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_xlm-roberta_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,636 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/sentence_xlnet_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,676 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:57,719 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:57,729 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:58,231 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:58,242 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:58,291 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:58,301 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:58,352 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-Embedding-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 17:49:58,391 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-Embedding-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 17:49:59,295 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-Embedding-8B "HTTP/1.1 200 OK"
+2026-03-29 17:49:59,332 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:49:59,343 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-Embedding-8B/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-29 17:49:59,389 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-Embedding-8B "HTTP/1.1 200 OK"
+2026-03-29 17:49:59,412 INFO 1 prompt is loaded, with the key: query
+2026-03-29 17:49:59,412 INFO   Embedding schema triples ...
+2026-03-29 17:51:02,547 INFO 43 document embeddings with dimension 4096
+2026-03-29 17:51:02,547 INFO   Embedding competency questions ...
+2026-03-29 17:51:29,757 INFO 
+  Results for Qwen3-Embedding-8B:
+2026-03-29 17:51:29,758 INFO     Hit@1                  0.8000
+2026-03-29 17:51:29,758 INFO     Hit@3                  1.0000
+2026-03-29 17:51:29,758 INFO     Hit@5                  1.0000
+2026-03-29 17:51:29,758 INFO     MRR                    0.9000
+2026-03-29 17:51:29,758 INFO     AvgCos_Relevant        0.7085
+2026-03-29 17:51:29,758 INFO     Embed_dim              4096
+2026-03-29 17:51:29,758 INFO     Time_sec               92.7000
+2026-03-29 17:51:29,758 INFO 
+  Per-Query Cosine Similarity (top-3 retrieved):
+2026-03-29 17:51:29,758 INFO 
+  CQ01: What records does an Agent have?
+2026-03-29 17:51:29,758 INFO     1. [✓] Agent has an agent record called AgentRecord.  sim=0.8553
+2026-03-29 17:51:29,758 INFO     2. [ ] AgentRecord was recorded at an Event.  sim=0.7525
+2026-03-29 17:51:29,758 INFO     3. [ ] AgeRecord is a subclass of AgentRecord.  sim=0.7520
+2026-03-29 17:51:29,758 INFO 
+  CQ02: What is the structure of a NameRecord?
+2026-03-29 17:51:29,759 INFO     1. [✓] NameRecord has a name variant of type NameVariant.  sim=0.7714
+2026-03-29 17:51:29,759 INFO     2. [✓] NameRecord is a subclass of AgentRecord.  sim=0.7486
+2026-03-29 17:51:29,759 INFO     3. [✓] NameRecord has a preferred name variant of type NameVariant.  sim=0.6631
+2026-03-29 17:51:29,759 INFO 
+  CQ03: How is time or date information modelled?
+2026-03-29 17:51:29,759 INFO     1. [ ] TemporalExtent occurs after xsd:date.  sim=0.6641
+2026-03-29 17:51:29,759 INFO     2. [✓] TemporalExtent contains xsd:date.  sim=0.6562
+2026-03-29 17:51:29,759 INFO     3. [ ] Event has a temporal extent represented by TemporalExtent.  sim=0.6461
+2026-03-29 17:51:29,759 INFO 
+  CQ04: What properties does an Event have?
+2026-03-29 17:51:29,759 INFO     1. [✓] Event has a name which is a xsd:string.  sim=0.7614
+2026-03-29 17:51:29,759 INFO     2. [✓] Event has an event type defined in EventTypes.txt.  sim=0.7146
+2026-03-29 17:51:29,759 INFO     3. [✓] Event is a sub-event of Event.  sim=0.6968
+2026-03-29 17:51:29,759 INFO 
+  CQ05: Which entity types are subclasses of AgentRecord?
+2026-03-29 17:51:29,759 INFO     1. [ ] Agent has an agent record called AgentRecord.  sim=0.8593
+2026-03-29 17:51:29,759 INFO     2. [✓] AgeRecord is a subclass of AgentRecord.  sim=0.8032
+2026-03-29 17:51:29,759 INFO     3. [✓] InterAgentRelationshipRecord is a subclass of AgentRecord.  sim=0.7954
+2026-03-29 17:51:29,759 INFO 
+  CQ06: How are external identifiers or references stored?
+2026-03-29 17:51:29,759 INFO     1. [✓] ExternalReference is identified with an ID of type xsd:string.  sim=0.7526
+2026-03-29 17:51:29,760 INFO     2. [✓] Agent has an external reference of type ExternalReference.  sim=0.7063
+2026-03-29 17:51:29,760 INFO     3. [✓] Event has an external reference of type ExternalReference.  sim=0.6850
+2026-03-29 17:51:29,760 INFO 
+  CQ07: How is a person's occupation recorded?
+2026-03-29 17:51:29,760 INFO     1. [✓] OccupationRecord has a value of type Occupations.txt.  sim=0.8117
+2026-03-29 17:51:29,760 INFO     2. [✓] OccupationRecord is a subclass of AgentRecord.  sim=0.7403
+2026-03-29 17:51:29,760 INFO     3. [ ] AgeRecord has a value of type AgeCategory.txt.  sim=0.5236
+2026-03-29 17:51:29,760 INFO 
+  CQ08: What are the name components of a NameVariant?
+2026-03-29 17:51:29,760 INFO     1. [✓] NameVariant stores a surname as a xsd:string.  sim=0.7818
+2026-03-29 17:51:29,760 INFO     2. [✓] NameVariant stores a full name as a xsd:string.  sim=0.7749
+2026-03-29 17:51:29,760 INFO     3. [✓] NameVariant stores a first name as a xsd:string.  sim=0.7637
+2026-03-29 17:51:29,760 INFO 
+  CQ09: How are relationships between agents modelled?
+2026-03-29 17:51:29,760 INFO     1. [✓] InterAgentRelationshipRecord is a relationship directed to Agent.  sim=0.6780
+2026-03-29 17:51:29,760 INFO     2. [✓] InterAgentRelationshipRecord is a subclass of AgentRecord.  sim=0.6705
+2026-03-29 17:51:29,760 INFO     3. [✓] InterAgentRelationshipRecord has an inter-agent relationship type from  sim=0.6704
+2026-03-29 17:51:29,760 INFO 
+  CQ10: What role does a participant play in an event?
+2026-03-29 17:51:29,760 INFO     1. [✓] Event provides a participant role of type ParticipantRoleRecord.  sim=0.7461
+2026-03-29 17:51:29,760 INFO     2. [✓] ParticipantRoleRecord has its role provided by Event.  sim=0.7142
+2026-03-29 17:51:29,760 INFO     3. [✓] ParticipantRoleRecord has a participant role type from ParticipantRole  sim=0.6407
+2026-03-29 17:51:29,761 INFO 
+2026-03-29 17:51:29,761 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:51:29,761 INFO   MODEL: llama-embed-nemotron-8b
+2026-03-29 17:51:29,761 INFO ─────────────────────────────────────────────────────────────────
+2026-03-29 17:51:29,761 INFO   Loading nvidia/llama-embed-nemotron-8b via SentenceTransformer ...
+2026-03-29 17:51:29,765 INFO Use pytorch device_name: cpu
+2026-03-29 17:51:29,765 INFO Load pretrained SentenceTransformer: nvidia/llama-embed-nemotron-8b
+2026-03-29 17:51:29,831 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:29,843 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:29,882 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:29,893 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:29,933 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:29,944 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:29,980 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:29,991 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/README.md "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,028 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,039 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/modules.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,080 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,092 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,136 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-29 17:51:30,175 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,187 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,225 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/llama_bidirectional_model.py "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,236 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/llama_bidirectional_model.py "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,311 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,325 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,371 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/llama_bidirectional_model.py "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,383 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/llama_bidirectional_model.py "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,688 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,700 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,745 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/llama_bidirectional_model.py "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,757 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/llama_bidirectional_model.py "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,800 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,811 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,855 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:30,865 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:30,908 INFO HTTP Request: GET https://huggingface.co/api/models/nvidia/llama-embed-nemotron-8b/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 17:51:30,949 INFO HTTP Request: GET https://huggingface.co/api/models/nvidia/llama-embed-nemotron-8b/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 17:51:32,500 INFO HTTP Request: GET https://huggingface.co/api/models/nvidia/llama-embed-nemotron-8b "HTTP/1.1 200 OK"
+2026-03-29 17:51:32,584 INFO HTTP Request: HEAD https://huggingface.co/nvidia/llama-embed-nemotron-8b/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:51:32,595 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/nvidia/llama-embed-nemotron-8b/1acaf42b890bafa464ef9a58d1c0db0dd26120d4/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-29 17:51:32,634 INFO HTTP Request: GET https://huggingface.co/api/models/nvidia/llama-embed-nemotron-8b "HTTP/1.1 200 OK"
+2026-03-29 17:51:32,657 INFO 1 prompt is loaded, with the key: query
+2026-03-29 17:51:32,657 INFO   Embedding schema triples ...
+2026-03-29 17:52:28,631 INFO 43 document embeddings with dimension 4096
+2026-03-29 17:52:28,632 INFO   Embedding competency questions ...
+2026-03-29 17:52:41,330 INFO 
+  Results for llama-embed-nemotron-8b:
+2026-03-29 17:52:41,330 INFO     Hit@1                  0.8000
+2026-03-29 17:52:41,330 INFO     Hit@3                  0.9000
+2026-03-29 17:52:41,330 INFO     Hit@5                  1.0000
+2026-03-29 17:52:41,330 INFO     MRR                    0.8583
+2026-03-29 17:52:41,331 INFO     AvgCos_Relevant        0.6536
+2026-03-29 17:52:41,331 INFO     Embed_dim              4096
+2026-03-29 17:52:41,331 INFO     Time_sec               71.6000
+2026-03-29 17:52:41,331 INFO 
+  Per-Query Cosine Similarity (top-3 retrieved):
+2026-03-29 17:52:41,331 INFO 
+  CQ01: What records does an Agent have?
+2026-03-29 17:52:41,331 INFO     1. [✓] Agent has an agent record called AgentRecord.  sim=0.7165
+2026-03-29 17:52:41,331 INFO     2. [ ] AgentRecord was recorded at an Event.  sim=0.6690
+2026-03-29 17:52:41,331 INFO     3. [ ] AgentRecord has a temporal extent represented by TemporalExtent.  sim=0.6355
+2026-03-29 17:52:41,331 INFO 
+  CQ02: What is the structure of a NameRecord?
+2026-03-29 17:52:41,331 INFO     1. [✓] NameRecord is a subclass of AgentRecord.  sim=0.6841
+2026-03-29 17:52:41,331 INFO     2. [✓] NameRecord has a name variant of type NameVariant.  sim=0.6785
+2026-03-29 17:52:41,331 INFO     3. [✓] NameRecord has a preferred name variant of type NameVariant.  sim=0.6678
+2026-03-29 17:52:41,331 INFO 
+  CQ03: How is time or date information modelled?
+2026-03-29 17:52:41,331 INFO     1. [✓] Timespan is a subclass of TemporalExtent.  sim=0.6854
+2026-03-29 17:52:41,332 INFO     2. [ ] Event has a temporal extent represented by TemporalExtent.  sim=0.6371
+2026-03-29 17:52:41,332 INFO     3. [✓] TemporalExtent contains xsd:date.  sim=0.6336
+2026-03-29 17:52:41,332 INFO 
+  CQ04: What properties does an Event have?
+2026-03-29 17:52:41,332 INFO     1. [✓] Event has an event type defined in EventTypes.txt.  sim=0.6997
+2026-03-29 17:52:41,332 INFO     2. [✓] Event has a name which is a xsd:string.  sim=0.6641
+2026-03-29 17:52:41,332 INFO     3. [✓] Event has a temporal extent represented by TemporalExtent.  sim=0.6404
+2026-03-29 17:52:41,332 INFO 
+  CQ05: Which entity types are subclasses of AgentRecord?
+2026-03-29 17:52:41,332 INFO     1. [ ] Agent has an agent record called AgentRecord.  sim=0.6999
+2026-03-29 17:52:41,332 INFO     2. [ ] Agent has a name which is a xsd:string.  sim=0.6917
+2026-03-29 17:52:41,332 INFO     3. [✓] InterAgentRelationshipRecord is a subclass of AgentRecord.  sim=0.6878
+2026-03-29 17:52:41,332 INFO 
+  CQ06: How are external identifiers or references stored?
+2026-03-29 17:52:41,332 INFO     1. [✓] ExternalReference is identified with an ID of type xsd:string.  sim=0.7418
+2026-03-29 17:52:41,332 INFO     2. [✓] ExternalReference refers to ExternalReferent.  sim=0.7303
+2026-03-29 17:52:41,332 INFO     3. [✓] Agent has an external reference of type ExternalReference.  sim=0.6797
+2026-03-29 17:52:41,332 INFO 
+  CQ07: How is a person's occupation recorded?
+2026-03-29 17:52:41,333 INFO     1. [✓] OccupationRecord has a value of type Occupations.txt.  sim=0.6548
+2026-03-29 17:52:41,333 INFO     2. [✓] OccupationRecord is a subclass of AgentRecord.  sim=0.6336
+2026-03-29 17:52:41,333 INFO     3. [ ] Agent has a name which is a xsd:string.  sim=0.6119
+2026-03-29 17:52:41,333 INFO 
+  CQ08: What are the name components of a NameVariant?
+2026-03-29 17:52:41,333 INFO     1. [ ] NameRecord has a name variant of type NameVariant.  sim=0.7558
+2026-03-29 17:52:41,333 INFO     2. [ ] NameRecord has a preferred name variant of type NameVariant.  sim=0.7316
+2026-03-29 17:52:41,333 INFO     3. [ ] NameRecord is a subclass of AgentRecord.  sim=0.7040
+2026-03-29 17:52:41,333 INFO 
+  CQ09: How are relationships between agents modelled?
+2026-03-29 17:52:41,333 INFO     1. [✓] InterAgentRelationshipRecord is a relationship directed to Agent.  sim=0.6456
+2026-03-29 17:52:41,333 INFO     2. [✓] InterAgentRelationshipRecord is a relationship originating from Agent.  sim=0.6425
+2026-03-29 17:52:41,333 INFO     3. [✓] InterAgentRelationshipRecord has an inter-agent relationship type from  sim=0.6215
+2026-03-29 17:52:41,333 INFO 
+  CQ10: What role does a participant play in an event?
+2026-03-29 17:52:41,333 INFO     1. [✓] Event provides a participant role of type ParticipantRoleRecord.  sim=0.7283
+2026-03-29 17:52:41,333 INFO     2. [✓] ParticipantRoleRecord has its role provided by Event.  sim=0.6939
+2026-03-29 17:52:41,333 INFO     3. [✓] ParticipantRoleRecord has a participant role type from ParticipantRole  sim=0.6545
+2026-03-29 17:52:41,334 INFO 
+2026-03-29 17:52:41,334 INFO =================================================================
+2026-03-29 17:52:41,334 INFO   FINAL COMPARISON SUMMARY
+2026-03-29 17:52:41,334 INFO =================================================================
+2026-03-29 17:52:41,338 INFO ╭─────────────────────────┬─────────┬─────────┬─────────┬───────┬───────────────────┬─────────────┬───────────╮
+│ Model                   │   Hit@1 │   Hit@3 │   Hit@5 │   MRR │   AvgCos_Relevant │   Embed_dim │   Time(s) │
+├─────────────────────────┼─────────┼─────────┼─────────┼───────┼───────────────────┼─────────────┼───────────┤
+│ bge-large-en-v1.5       │     0.8 │     1   │       1 │ 0.9   │            0.7093 │        1024 │       9.7 │
+│ Qwen3-Embedding-8B      │     0.8 │     1   │       1 │ 0.9   │            0.7085 │        4096 │      92.7 │
+│ llama-embed-nemotron-8b │     0.8 │     0.9 │       1 │ 0.858 │            0.6536 │        4096 │      71.6 │
+╰─────────────────────────┴─────────┴─────────┴─────────┴───────┴───────────────────┴─────────────┴───────────╯
+2026-03-29 17:52:41,338 INFO 
+  Metric guide
+  ────────────
+  Hit@K          : Fraction of queries where ≥1 relevant triple
+                   appears in the top-K retrieved results (higher = better)
+  MRR            : Mean Reciprocal Rank — how high the first correct
+                   result ranks on average (higher = better, max 1.0)
+  AvgCos_Relevant: Average cosine similarity between a query and its
+                   known-relevant triples (higher = better)
+  Embed_dim      : Output vector dimension of the model
+  Time(s)        : Total wall-clock time for loading + embedding
+    
+2026-03-29 17:52:41,354 INFO   ✓ Results saved to nen_eval_results.csv
