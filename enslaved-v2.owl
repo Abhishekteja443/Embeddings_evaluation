@@ -1,0 +1,2138 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://enslaved.org/ontology/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://enslaved.org/ontology/"
+     versionIRI="https://enslaved.org/ontology/1.0.0">
+    <Prefix name="" IRI="https://enslaved.org/ontology/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="opla" IRI="http://ontologydesignpatterns.org/opla#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="dcterms" IRI="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>The Enslaved Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Alicia M. Sheill</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Catherine Foley</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Cogan Shimizu</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Dean Rehberger</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Duncan Tarr</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Ethan Watrall</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Jeff Mixter</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Pascal Hitzler</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Quinn Hirt</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Ryan Carty</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Seila Gonzalez Estrecha</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Walter Hawthorne</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:license"/>
+        <Literal>CC by 4.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:license"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:rights"/>
+        <Literal>CC by 4.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="AgeCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AgeRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AgentRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Coordinates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DocumentTypes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ECVO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EntityWithProvenance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EventTypes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExternalReference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExternalReferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InterAgentRelationshipRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InterAgentRelationshipTypes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LicenseInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Match"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MatchType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NameRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NameVariant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupationRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Occupations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OriginRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PSCategories"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParticipantRoleRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParticipantRoleTypes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PersonRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PersonStatusRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PlaceCV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PlaceTypeCV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ProvenanceActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RaceRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResearchProject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResearchProjectContributorRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResearchProjectPIRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Researcher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SexRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SexTypes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SpatialExtent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TemporalExtent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeSpan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="agentRecordSelfProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="asPlaceCV"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="atPlace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="attributedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="eventSelfProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="fallsWithin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="generatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAgeRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAgentRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasBroader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDescriptionText"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasECVO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasEventType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasExternalReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInterAgentRelationshipRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInterAgentRelationshipType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLicenseInformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMatchType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNameRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNameVariant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupationRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOriginRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOriginalSourceType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasParticipantRoleRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasParticipantRoleType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPersonStatusRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPlaceTypeCV"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPreferredNameVariant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRaceRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSexRecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSpatialExtent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStatusGeneratedEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTemporalExtent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAdministrativePartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isDirectlyBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRelationshipFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRelationshipTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSpatiallyLocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="matches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="providesParticipantRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="recordedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="refersTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="refersToEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="refersToPlaceOfOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="reportsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="roleProvidedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="subeventOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="used"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="asText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="availableFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="contains"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endsAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="fullNameAsString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasAgeValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasAlternateName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDescriptiveEthnonym"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDescriptiveOccupation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFirstNameAsString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasReferenceURI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSurnameAsString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="occursAfter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="occursBefore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="startsAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="withID"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:rights"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="atPlace"/>
+            <Class IRI="Place"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasCoordinates"/>
+            <Class IRI="Coordinates"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasDescriptionText"/>
+            <Class IRI="Description"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasExternalReference"/>
+            <Class IRI="ExternalReference"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasNameVariant"/>
+            <Class IRI="NameVariant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasSpatialExtent"/>
+            <Class IRI="SpatialExtent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasTemporalExtent"/>
+            <Class IRI="TemporalExtent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="providesParticipantRole"/>
+            <Class IRI="ParticipantRoleRecord"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="refersToEvent"/>
+            <Class IRI="Event"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="subeventOf"/>
+            <Class IRI="Event"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="hasDescriptionText"/>
+            </ObjectInverseOf>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="hasExternalReference"/>
+            </ObjectInverseOf>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="fullNameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasAlternateName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFirstNameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasLatitude"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasLongitude"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasSurnameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgeRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgeRecord"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasValue"/>
+                <Class IRI="AgeCategory"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="hasAgeValue"/>
+                <Datatype abbreviatedIRI="xsd:double"/>
+            </DataSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgeRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasValue"/>
+            <Class IRI="AgeCategory"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgeRecord"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="hasAgeValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasAgentRecord"/>
+            <Class IRI="AgentRecord"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasDescriptionText"/>
+            <Class IRI="Description"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasExternalReference"/>
+            <Class IRI="ExternalReference"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasTemporalExtent"/>
+            <Class IRI="TemporalExtent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="hasAgentRecord"/>
+            </ObjectInverseOf>
+            <Class IRI="Agent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="isDirectlyBasedOn"/>
+            <Class IRI="EntityWithProvenance"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="recordedAt"/>
+            <Class IRI="Event"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="reportsOn"/>
+            <Class IRI="Event"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AgentRecord"/>
+        <ObjectHasSelf>
+            <ObjectProperty IRI="agentRecordSelfProperty"/>
+        </ObjectHasSelf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coordinates"/>
+        <Class IRI="SpatialExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coordinates"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasLatitude"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coordinates"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasLongitude"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Description"/>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="asText"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasLicenseInformation"/>
+            <Class IRI="LicenseInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="attributedTo"/>
+            <Class IRI="Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="generatedBy"/>
+            <Class IRI="ProvenanceActivity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasLicenseInformation"/>
+            <Class IRI="LicenseInformation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasOriginalSourceType"/>
+            <Class IRI="DocumentTypes"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isDirectlyBasedOn"/>
+            <Class IRI="EntityWithProvenance"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="used"/>
+            <Class IRI="EntityWithProvenance"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="reportsOn"/>
+            <Class IRI="Event"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasOriginalSourceType"/>
+            <Class IRI="DocumentTypes"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="availableFrom"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="availableFrom"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EntityWithProvenance"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="hasReferenceURI"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="atPlace"/>
+            <Class IRI="Place"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasEventType"/>
+            <Class IRI="EventTypes"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasDescriptionText"/>
+            <Class IRI="Description"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="hasExternalReference"/>
+            <Class IRI="ExternalReference"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="providesParticipantRole"/>
+            <Class IRI="ParticipantRoleRecord"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasEventType"/>
+            <Class IRI="EventTypes"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasTemporalExtent"/>
+            <Class IRI="TemporalExtent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectHasSelf>
+            <ObjectProperty IRI="eventSelfProperty"/>
+        </ObjectHasSelf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ExternalReference"/>
+        <ObjectIntersectionOf>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="refersTo"/>
+                <Class IRI="ExternalReferent"/>
+            </ObjectMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="withID"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ExternalReference"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="refersTo"/>
+                <Class IRI="ExternalReferent"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="withID"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ExternalReference"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="refersTo"/>
+            <Class IRI="ExternalReferent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ExternalReference"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="withID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasInterAgentRelationshipType"/>
+            <Class IRI="InterAgentRelationshipTypes"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isRelationshipFrom"/>
+            <Class IRI="Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isRelationshipTo"/>
+            <Class IRI="Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="isRelationshipFrom"/>
+            <Class IRI="Agent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="isRelationshipTo"/>
+            <Class IRI="Agent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InterAgentRelationshipRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasInterAgentRelationshipType"/>
+            <Class IRI="InterAgentRelationshipTypes"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Match"/>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Match"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="matches"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Match"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasMatchType"/>
+            <Class IRI="MatchType"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasNameVariant"/>
+            <Class IRI="NameVariant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasPreferredNameVariant"/>
+            <Class IRI="NameVariant"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="fullNameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="hasFirstNameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameRecord"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="hasSurnameAsString"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupationRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupationRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasValue"/>
+            <Class IRI="Occupations"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupationRecord"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="hasDescriptiveOccupation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Organization"/>
+        <Class IRI="Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasECVO"/>
+                <Class IRI="ECVO"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="refersToPlaceOfOrigin"/>
+                <Class IRI="Place"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasECVO"/>
+            <Class IRI="ECVO"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="refersToPlaceOfOrigin"/>
+            <Class IRI="Place"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasECVO"/>
+            <Class IRI="ECVO"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginRecord"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="hasDescriptiveEthnonym"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParticipantRoleRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParticipantRoleRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasParticipantRoleType"/>
+            <Class IRI="ParticipantRoleTypes"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParticipantRoleRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="providesParticipantRole"/>
+            </ObjectInverseOf>
+            <Class IRI="Event"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParticipantRoleRecord"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasParticipantRoleType"/>
+            <Class IRI="ParticipantRoleTypes"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Person"/>
+        <Class IRI="Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Person"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasPersonRecord"/>
+            <Class IRI="PersonRecord"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="hasPersonRecord"/>
+            </ObjectInverseOf>
+            <Class IRI="Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonStatusRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonStatusRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasStatusGeneratedEvent"/>
+            <Class IRI="Event"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonStatusRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasValue"/>
+            <Class IRI="PSCategories"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasBroader"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasDescriptionText"/>
+            <Class IRI="Description"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="isAdministrativePartOf"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="isSpatiallyLocatedIn"/>
+            <Class IRI="Place"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="isSpatiallyLocatedIn"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasPlaceTypeCV"/>
+            <Class IRI="PlaceTypeCV"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasSpatialExtent"/>
+            <Class IRI="SpatialExtent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasTemporalExtent"/>
+            <Class IRI="TemporalExtent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="hasAlternateName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasBroader"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasDescriptionText"/>
+            <Class IRI="Description"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="isAdministrativePartOf"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="isSpatiallyLocatedIn"/>
+            <Class IRI="PlaceCV"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasPlaceTypeCV"/>
+            <Class IRI="PlaceTypeCV"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="hasAlternateName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PlaceCV"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ProvenanceActivity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="performedBy"/>
+            <Class IRI="Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ProvenanceActivity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="used"/>
+            <Class IRI="EntityWithProvenance"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RaceRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RaceRecord"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="asText"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProject"/>
+        <Class IRI="Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProject"/>
+        <Class IRI="ProvenanceActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProjectContributorRole"/>
+        <Class IRI="Researcher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProjectContributorRole"/>
+        <ObjectAllValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="providesParticipantRole"/>
+            </ObjectInverseOf>
+            <Class IRI="ResearchProject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProjectPIRole"/>
+        <Class IRI="Researcher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchProjectPIRole"/>
+        <ObjectAllValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="providesParticipantRole"/>
+            </ObjectInverseOf>
+            <Class IRI="ResearchProject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SexRecord"/>
+        <Class IRI="AgentRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SexRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasValue"/>
+            <Class IRI="SexTypes"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="fallsWithin"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="contains"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="endsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="occursAfter"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="occursBefore"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TemporalExtent"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="startsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="endsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="startsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectComplementOf>
+            <Class IRI="Person"/>
+        </ObjectComplementOf>
+        <ObjectComplementOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="hasAgentRecord"/>
+                <ObjectUnionOf>
+                    <Class IRI="AgeRecord"/>
+                    <Class IRI="OccupationRecord"/>
+                    <Class IRI="OriginRecord"/>
+                    <Class IRI="PersonStatusRecord"/>
+                    <Class IRI="RaceRecord"/>
+                    <Class IRI="SexRecord"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="fallsWithin"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="generatedBy"/>
+            <Class IRI="ProvenanceActivity"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasAgentRecord"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasEventType"/>
+            <Class IRI="EventTypes"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasInterAgentRelationshipType"/>
+            <Class IRI="InterAgentRelationshipTypes"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="InterAgentRelationshipRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasOriginalSourceType"/>
+            <Class IRI="DocumentTypes"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="EntityWithProvenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasParticipantRoleType"/>
+            <Class IRI="ParticipantRoleTypes"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="ParticipantRoleRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStatusGeneratedEvent"/>
+            <Class IRI="Event"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="PersonStatusRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isRelationshipFrom"/>
+            <Class IRI="Agent"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="InterAgentRelationshipRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isRelationshipTo"/>
+            <Class IRI="Agent"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="InterAgentRelationshipRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="performedBy"/>
+            <Class IRI="Agent"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="ProvenanceActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="subeventOf"/>
+            <Class IRI="Event"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="used"/>
+            <Class IRI="EntityWithProvenance"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="ProvenanceActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="contains"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="endsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="occursAfter"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="occursBefore"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="startsAt"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataSomeValuesFrom>
+        <Class IRI="TemporalExtent"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasAgeRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasECVO"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasInterAgentRelationshipRecord"/>
+        <ObjectProperty IRI="hasAgentRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNameRecord"/>
+        <ObjectProperty IRI="hasAgentRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOccupationRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOriginRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasParticipantRoleRecord"/>
+        <ObjectProperty IRI="hasAgentRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPersonRecord"/>
+        <ObjectProperty IRI="hasAgentRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPersonStatusRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPreferredNameVariant"/>
+        <ObjectProperty IRI="hasNameVariant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRaceRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSexRecord"/>
+        <ObjectProperty IRI="hasPersonRecord"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasStatusGeneratedEvent"/>
+        <ObjectProperty IRI="refersToEvent"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasParticipantRoleRecord"/>
+        <ObjectProperty IRI="roleProvidedBy"/>
+    </InverseObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="agentRecordSelfProperty"/>
+            <ObjectProperty IRI="recordedAt"/>
+            <ObjectProperty IRI="eventSelfProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="reportsOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="isDirectlyBasedOn"/>
+            <ObjectProperty IRI="hasOriginalSourceType"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="hasOriginalSourceType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="isDirectlyBasedOn"/>
+            </ObjectInverseOf>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="hasOriginalSourceType"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="hasOriginalSourceType"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>AgeCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgeRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>AgeRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgeRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Agent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>AgentRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Description</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>DocumentTypes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ECVO</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OriginRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>EntityWithProvenance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Event</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>EventTypes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ExternalReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ExternalReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ExternalReferent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ExternalReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>InterAgentRelationshipRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/InterAgentRelationshipRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>InterAgentRelationshipTypes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/InterAgentRelationshipRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>LicenseInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>NameRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>NameVariant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>OccupationRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OccupationRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Occupations</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OccupationRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Organization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>OriginRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OriginRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>PSCategories</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonStatusRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ParticipantRoleRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ParticipantRoleTypes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Person</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>PersonRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>PersonStatusRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonStatusRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Place</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ProvenanceActivity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>RaceRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/RaceRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ResearchProject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ResearchProjectContributorRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>ResearchProjectPIRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>Researcher</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>SexRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/SexRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>SexTypes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/SexRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>TemporalExtent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>TimeSpan</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>agentRecordSelfProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>asPlaceCV</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>asText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>asText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/RaceRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>atPlace</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>attributedTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>availableFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>contains</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>endsAt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>eventSelfProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>fallsWithin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>fullNameAsString</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>generatedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasAgeValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgeRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasAgentRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasAlternateName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasCoordinates</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasDescriptionText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasDescriptionText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasDescriptionText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasDescriptionText</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasECVO</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OriginRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasEventType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasExternalReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasExternalReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasExternalReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasFirstNameAsString</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasInterAgentRelationshipType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/InterAgentRelationshipRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasLatitude</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasLicenseInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasLongitude</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasNameVariant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasOriginalSourceType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasParticipantRoleType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ParticipantRoleRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasPreferredNameVariant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasReferenceURI</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasStatusGeneratedEvent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonStatusRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasSurnameAsString</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/NameRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasTemporalExtent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasTemporalExtent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgeRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OccupationRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonStatusRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>hasValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/SexRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>isDirectlyBasedOn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>isRelationshipFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/InterAgentRelationshipRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>isRelationshipTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/InterAgentRelationshipRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>isSpatiallyLocatedIn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>occursAfter</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>occursBefore</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>performedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>providesParticipantRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>providesParticipantRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ResearchProject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>recordedAt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/AgentRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>refersTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ExternalReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>refersToEvent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/PersonStatusRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>refersToPlaceOfOrigin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/OriginRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>reportsOn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>roleProvidedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ParticipantRoleRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>startsAt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/TemporalExtent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>subeventOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>used</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/EntityWithProvenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="opla:isNativeTo"/>
+        <IRI>withID</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">https://enslaved.org/ontology/ExternalReference</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
