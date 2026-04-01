@@ -1,0 +1,1403 @@
+@prefix : <https://enslaved.org/ontology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dcterms: <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/> .
+@base <https://enslaved.org/ontology/> .
+
+<https://enslaved.org/ontology/> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://enslaved.org/ontology/1.0.0> ;
+                                  dc:title "The Enslaved Ontology" ;
+                                  terms:creator "Alicia M. Sheill" ,
+                                                "Catherine Foley" ,
+                                                "Cogan Shimizu" ,
+                                                "Dean Rehberger" ,
+                                                "Duncan Tarr" ,
+                                                "Ethan Watrall" ,
+                                                "Jeff Mixter" ,
+                                                "Pascal Hitzler" ,
+                                                "Quinn Hirt" ,
+                                                "Ryan Carty" ,
+                                                "Seila Gonzalez Estrecha" ,
+                                                "Walter Hawthorne" ;
+                                  terms:license "CC by 4.0" ,
+                                                "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+                                  terms:rights "CC by 4.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla#isNativeTo
+opla:isNativeTo rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+terms:rights rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://enslaved.org/ontology/agentRecordSelfProperty
+:agentRecordSelfProperty rdf:type owl:ObjectProperty ;
+                         opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/asPlaceCV
+:asPlaceCV rdf:type owl:ObjectProperty ;
+           opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/atPlace
+:atPlace rdf:type owl:ObjectProperty ;
+         opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/attributedTo
+:attributedTo rdf:type owl:ObjectProperty ;
+              opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/eventSelfProperty
+:eventSelfProperty rdf:type owl:ObjectProperty ;
+                   opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/fallsWithin
+:fallsWithin rdf:type owl:ObjectProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/generatedBy
+:generatedBy rdf:type owl:ObjectProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasAgeRecord
+:hasAgeRecord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasAgentRecord
+:hasAgentRecord rdf:type owl:ObjectProperty ;
+                opla:isNativeTo "https://enslaved.org/ontology/Agent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasBroader
+:hasBroader rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/hasCoordinates
+:hasCoordinates rdf:type owl:ObjectProperty ;
+                opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasDescriptionText
+:hasDescriptionText rdf:type owl:ObjectProperty ;
+                    opla:isNativeTo "https://enslaved.org/ontology/Agent"^^rdfs:Literal ,
+                                    "https://enslaved.org/ontology/Event"^^rdfs:Literal ,
+                                    "https://enslaved.org/ontology/Place"^^rdfs:Literal ,
+                                    "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasECVO
+:hasECVO rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         opla:isNativeTo "https://enslaved.org/ontology/OriginRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasEventType
+:hasEventType rdf:type owl:ObjectProperty ;
+              opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasExternalReference
+:hasExternalReference rdf:type owl:ObjectProperty ;
+                      opla:isNativeTo "https://enslaved.org/ontology/Agent"^^rdfs:Literal ,
+                                      "https://enslaved.org/ontology/Event"^^rdfs:Literal ,
+                                      "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasInterAgentRelationshipRecord
+:hasInterAgentRelationshipRecord rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :hasAgentRecord .
+
+
+###  https://enslaved.org/ontology/hasInterAgentRelationshipType
+:hasInterAgentRelationshipType rdf:type owl:ObjectProperty ;
+                               opla:isNativeTo "https://enslaved.org/ontology/InterAgentRelationshipRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasLicenseInformation
+:hasLicenseInformation rdf:type owl:ObjectProperty ;
+                       opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasMatchType
+:hasMatchType rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/hasNameRecord
+:hasNameRecord rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasAgentRecord .
+
+
+###  https://enslaved.org/ontology/hasNameVariant
+:hasNameVariant rdf:type owl:ObjectProperty ;
+                opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasOccupationRecord
+:hasOccupationRecord rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasOriginRecord
+:hasOriginRecord rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasOriginalSourceType
+:hasOriginalSourceType rdf:type owl:ObjectProperty ;
+                       owl:propertyChainAxiom ( :isDirectlyBasedOn
+                                                :hasOriginalSourceType
+                                              ) ,
+                                              ( [ owl:inverseOf :isDirectlyBasedOn
+                                                ]
+                                                [ owl:inverseOf :hasOriginalSourceType
+                                                ]
+                                              ) ;
+                       opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasParticipantRoleRecord
+:hasParticipantRoleRecord rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasAgentRecord ;
+                          owl:inverseOf :roleProvidedBy .
+
+
+###  https://enslaved.org/ontology/hasParticipantRoleType
+:hasParticipantRoleType rdf:type owl:ObjectProperty ;
+                        opla:isNativeTo "https://enslaved.org/ontology/ParticipantRoleRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasPersonRecord
+:hasPersonRecord rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasAgentRecord .
+
+
+###  https://enslaved.org/ontology/hasPersonStatusRecord
+:hasPersonStatusRecord rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasPlaceTypeCV
+:hasPlaceTypeCV rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/hasPreferredNameVariant
+:hasPreferredNameVariant rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasNameVariant ;
+                         opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasRaceRecord
+:hasRaceRecord rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasSexRecord
+:hasSexRecord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasPersonRecord .
+
+
+###  https://enslaved.org/ontology/hasSpatialExtent
+:hasSpatialExtent rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/hasStatusGeneratedEvent
+:hasStatusGeneratedEvent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :refersToEvent ;
+                         opla:isNativeTo "https://enslaved.org/ontology/PersonStatusRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasTemporalExtent
+:hasTemporalExtent rdf:type owl:ObjectProperty ;
+                   opla:isNativeTo "https://enslaved.org/ontology/AgentRecord"^^rdfs:Literal ,
+                                   "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          opla:isNativeTo "https://enslaved.org/ontology/AgeRecord"^^rdfs:Literal ,
+                          "https://enslaved.org/ontology/OccupationRecord"^^rdfs:Literal ,
+                          "https://enslaved.org/ontology/PersonStatusRecord"^^rdfs:Literal ,
+                          "https://enslaved.org/ontology/SexRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/isAdministrativePartOf
+:isAdministrativePartOf rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/isDirectlyBasedOn
+:isDirectlyBasedOn rdf:type owl:ObjectProperty ;
+                   opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/isRelationshipFrom
+:isRelationshipFrom rdf:type owl:ObjectProperty ;
+                    opla:isNativeTo "https://enslaved.org/ontology/InterAgentRelationshipRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/isRelationshipTo
+:isRelationshipTo rdf:type owl:ObjectProperty ;
+                  opla:isNativeTo "https://enslaved.org/ontology/InterAgentRelationshipRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/isSpatiallyLocatedIn
+:isSpatiallyLocatedIn rdf:type owl:ObjectProperty ;
+                      opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/matches
+:matches rdf:type owl:ObjectProperty .
+
+
+###  https://enslaved.org/ontology/performedBy
+:performedBy rdf:type owl:ObjectProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/providesParticipantRole
+:providesParticipantRole rdf:type owl:ObjectProperty ;
+                         opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal ,
+                                         "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/recordedAt
+:recordedAt rdf:type owl:ObjectProperty ;
+            opla:isNativeTo "https://enslaved.org/ontology/AgentRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/refersTo
+:refersTo rdf:type owl:ObjectProperty ;
+          opla:isNativeTo "https://enslaved.org/ontology/ExternalReference"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/refersToEvent
+:refersToEvent rdf:type owl:ObjectProperty ;
+               opla:isNativeTo "https://enslaved.org/ontology/PersonStatusRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/refersToPlaceOfOrigin
+:refersToPlaceOfOrigin rdf:type owl:ObjectProperty ;
+                       opla:isNativeTo "https://enslaved.org/ontology/OriginRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/reportsOn
+:reportsOn rdf:type owl:ObjectProperty ;
+           owl:propertyChainAxiom ( :agentRecordSelfProperty
+                                    :recordedAt
+                                    :eventSelfProperty
+                                  ) ;
+           opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/roleProvidedBy
+:roleProvidedBy rdf:type owl:ObjectProperty ;
+                opla:isNativeTo "https://enslaved.org/ontology/ParticipantRoleRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/subeventOf
+:subeventOf rdf:type owl:ObjectProperty ;
+            opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/used
+:used rdf:type owl:ObjectProperty ;
+      opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://enslaved.org/ontology/asText
+:asText rdf:type owl:DatatypeProperty ;
+        opla:isNativeTo "https://enslaved.org/ontology/Description"^^rdfs:Literal ,
+                        "https://enslaved.org/ontology/RaceRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/availableFrom
+:availableFrom rdf:type owl:DatatypeProperty ;
+               opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/contains
+:contains rdf:type owl:DatatypeProperty ;
+          opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/endsAt
+:endsAt rdf:type owl:DatatypeProperty ;
+        opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/fullNameAsString
+:fullNameAsString rdf:type owl:DatatypeProperty ;
+                  opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasAgeValue
+:hasAgeValue rdf:type owl:DatatypeProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/AgeRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasAlternateName
+:hasAlternateName rdf:type owl:DatatypeProperty ;
+                  opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasDescriptiveEthnonym
+:hasDescriptiveEthnonym rdf:type owl:DatatypeProperty .
+
+
+###  https://enslaved.org/ontology/hasDescriptiveOccupation
+:hasDescriptiveOccupation rdf:type owl:DatatypeProperty .
+
+
+###  https://enslaved.org/ontology/hasFirstNameAsString
+:hasFirstNameAsString rdf:type owl:DatatypeProperty ;
+                      opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty ;
+              opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal ,
+                         "https://enslaved.org/ontology/Place"^^rdfs:Literal ,
+                         "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasReferenceURI
+:hasReferenceURI rdf:type owl:DatatypeProperty ;
+                 opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/hasSurnameAsString
+:hasSurnameAsString rdf:type owl:DatatypeProperty ;
+                    opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/occursAfter
+:occursAfter rdf:type owl:DatatypeProperty ;
+             opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/occursBefore
+:occursBefore rdf:type owl:DatatypeProperty ;
+              opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/startsAt
+:startsAt rdf:type owl:DatatypeProperty ;
+          opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/withID
+:withID rdf:type owl:DatatypeProperty ;
+        opla:isNativeTo "https://enslaved.org/ontology/ExternalReference"^^rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :atPlace ;
+                            owl:allValuesFrom :Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCoordinates ;
+                            owl:allValuesFrom :Coordinates
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDescriptionText ;
+                            owl:allValuesFrom :Description
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasExternalReference ;
+                            owl:allValuesFrom :ExternalReference
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasNameVariant ;
+                            owl:allValuesFrom :NameVariant
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSpatialExtent ;
+                            owl:allValuesFrom :SpatialExtent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasTemporalExtent ;
+                            owl:allValuesFrom :TemporalExtent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :providesParticipantRole ;
+                            owl:allValuesFrom :ParticipantRoleRecord
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :refersToEvent ;
+                            owl:allValuesFrom :Event
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :subeventOf ;
+                            owl:allValuesFrom :Event
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf :hasDescriptionText
+                                           ] ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf :hasExternalReference
+                                           ] ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :fullNameAsString ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAlternateName ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFirstNameAsString ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasLatitude ;
+                            owl:allValuesFrom xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasLongitude ;
+                            owl:allValuesFrom xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasName ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSurnameAsString ;
+                            owl:allValuesFrom xsd:string
+                          ] .
+
+
+###  https://enslaved.org/ontology/AgeCategory
+:AgeCategory rdf:type owl:Class ;
+             opla:isNativeTo "https://enslaved.org/ontology/AgeRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/AgeRecord
+:AgeRecord rdf:type owl:Class ;
+           rdfs:subClassOf :AgentRecord ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasValue ;
+                                             owl:someValuesFrom :AgeCategory
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasAgeValue ;
+                                             owl:someValuesFrom xsd:double
+                                           ]
+                                         )
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasValue ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :AgeCategory
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasAgeValue ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:double
+                           ] ;
+           opla:isNativeTo "https://enslaved.org/ontology/AgeRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAgentRecord ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :AgentRecord
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDescriptionText ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Description
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasExternalReference ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :ExternalReference
+                       ] ;
+       opla:isNativeTo "https://enslaved.org/ontology/AgentRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/AgentRecord
+:AgentRecord rdf:type owl:Class ;
+             rdfs:subClassOf :EntityWithProvenance ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTemporalExtent ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :TemporalExtent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf :hasAgentRecord
+                                              ] ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :isDirectlyBasedOn ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :EntityWithProvenance
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :recordedAt ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Event
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :reportsOn ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Event
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :agentRecordSelfProperty ;
+                               owl:hasSelf "true"^^xsd:boolean
+                             ] ;
+             opla:isNativeTo "https://enslaved.org/ontology/AgentRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Coordinates
+:Coordinates rdf:type owl:Class ;
+             rdfs:subClassOf :SpatialExtent ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLatitude ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:double
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLongitude ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:double
+                             ] .
+
+
+###  https://enslaved.org/ontology/Description
+:Description rdf:type owl:Class ;
+             rdfs:subClassOf :EntityWithProvenance ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :asText ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             opla:isNativeTo "https://enslaved.org/ontology/Description"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/DocumentTypes
+:DocumentTypes rdf:type owl:Class ;
+               opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ECVO
+:ECVO rdf:type owl:Class ;
+      opla:isNativeTo "https://enslaved.org/ontology/OriginRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/EntityWithProvenance
+:EntityWithProvenance rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasLicenseInformation ;
+                                        owl:someValuesFrom :LicenseInformation
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :attributedTo ;
+                                        owl:allValuesFrom :Agent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :generatedBy ;
+                                        owl:allValuesFrom :ProvenanceActivity
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasLicenseInformation ;
+                                        owl:allValuesFrom :LicenseInformation
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasOriginalSourceType ;
+                                        owl:allValuesFrom :DocumentTypes
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :isDirectlyBasedOn ;
+                                        owl:allValuesFrom :EntityWithProvenance
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :used ;
+                                        owl:allValuesFrom :EntityWithProvenance
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :reportsOn ;
+                                        owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :Event
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasOriginalSourceType ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :DocumentTypes
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :availableFrom ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :availableFrom ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasReferenceURI ;
+                                        owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:anyURI
+                                      ] ;
+                      opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :atPlace ;
+                         owl:someValuesFrom :Place
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasEventType ;
+                         owl:allValuesFrom :EventTypes
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDescriptionText ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Description
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasExternalReference ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :ExternalReference
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :providesParticipantRole ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :ParticipantRoleRecord
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasEventType ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :EventTypes
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTemporalExtent ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :TemporalExtent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :eventSelfProperty ;
+                         owl:hasSelf "true"^^xsd:boolean
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasName ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ;
+       opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/EventTypes
+:EventTypes rdf:type owl:Class ;
+            opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ExternalReference
+:ExternalReference rdf:type owl:Class ;
+                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :refersTo ;
+                                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass :ExternalReferent
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :withID ;
+                                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onDataRange xsd:string
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ,
+                                   [ rdf:type owl:Class ;
+                                     owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :refersTo ;
+                                                     owl:someValuesFrom :ExternalReferent
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :withID ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ]
+                                                 )
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :refersTo ;
+                                     owl:allValuesFrom :ExternalReferent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :withID ;
+                                     owl:allValuesFrom xsd:string
+                                   ] ;
+                   opla:isNativeTo "https://enslaved.org/ontology/ExternalReference"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ExternalReferent
+:ExternalReferent rdf:type owl:Class ;
+                  opla:isNativeTo "https://enslaved.org/ontology/ExternalReference"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/InterAgentRelationshipRecord
+:InterAgentRelationshipRecord rdf:type owl:Class ;
+                              rdfs:subClassOf :AgentRecord ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasInterAgentRelationshipType ;
+                                                owl:allValuesFrom :InterAgentRelationshipTypes
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isRelationshipFrom ;
+                                                owl:allValuesFrom :Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isRelationshipTo ;
+                                                owl:allValuesFrom :Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isRelationshipFrom ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass :Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isRelationshipTo ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass :Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasInterAgentRelationshipType ;
+                                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass :InterAgentRelationshipTypes
+                                              ] ;
+                              opla:isNativeTo "https://enslaved.org/ontology/InterAgentRelationshipRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/InterAgentRelationshipTypes
+:InterAgentRelationshipTypes rdf:type owl:Class ;
+                             opla:isNativeTo "https://enslaved.org/ontology/InterAgentRelationshipRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/LicenseInformation
+:LicenseInformation rdf:type owl:Class ;
+                    opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Match
+:Match rdf:type owl:Class ;
+       rdfs:subClassOf :EntityWithProvenance ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :matches ;
+                         owl:minCardinality "2"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasMatchType ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :MatchType
+                       ] .
+
+
+###  https://enslaved.org/ontology/MatchType
+:MatchType rdf:type owl:Class .
+
+
+###  https://enslaved.org/ontology/NameRecord
+:NameRecord rdf:type owl:Class ;
+            rdfs:subClassOf :AgentRecord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasNameVariant ;
+                              owl:someValuesFrom :NameVariant
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasPreferredNameVariant ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :NameVariant
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :fullNameAsString ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasFirstNameAsString ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasSurnameAsString ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ;
+            opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/NameVariant
+:NameVariant rdf:type owl:Class ;
+             opla:isNativeTo "https://enslaved.org/ontology/NameRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/OccupationRecord
+:OccupationRecord rdf:type owl:Class ;
+                  rdfs:subClassOf :AgentRecord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasValue ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Occupations
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDescriptiveOccupation ;
+                                    owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  opla:isNativeTo "https://enslaved.org/ontology/OccupationRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Occupations
+:Occupations rdf:type owl:Class ;
+             opla:isNativeTo "https://enslaved.org/ontology/OccupationRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Agent ;
+              opla:isNativeTo "https://enslaved.org/ontology/AgentRole"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/OriginRecord
+:OriginRecord rdf:type owl:Class ;
+              rdfs:subClassOf :AgentRecord ,
+                              [ rdf:type owl:Class ;
+                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasECVO ;
+                                                owl:someValuesFrom :ECVO
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :refersToPlaceOfOrigin ;
+                                                owl:someValuesFrom :Place
+                                              ]
+                                            )
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasECVO ;
+                                owl:allValuesFrom :ECVO
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :refersToPlaceOfOrigin ;
+                                owl:allValuesFrom :Place
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasECVO ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ECVO
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDescriptiveEthnonym ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              opla:isNativeTo "https://enslaved.org/ontology/OriginRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/PSCategories
+:PSCategories rdf:type owl:Class ;
+              opla:isNativeTo "https://enslaved.org/ontology/PersonStatusRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ParticipantRoleRecord
+:ParticipantRoleRecord rdf:type owl:Class ;
+                       rdfs:subClassOf :AgentRecord ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasParticipantRoleType ;
+                                         owl:allValuesFrom :ParticipantRoleTypes
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf :providesParticipantRole
+                                                        ] ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Event
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasParticipantRoleType ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :ParticipantRoleTypes
+                                       ] ;
+                       opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ParticipantRoleTypes
+:ParticipantRoleTypes rdf:type owl:Class ;
+                      opla:isNativeTo "https://enslaved.org/ontology/Event"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Agent ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasPersonRecord ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onClass :PersonRecord
+                        ] ;
+        opla:isNativeTo "https://enslaved.org/ontology/AgentRole"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/PersonRecord
+:PersonRecord rdf:type owl:Class ;
+              rdfs:subClassOf :AgentRecord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf :hasPersonRecord
+                                               ] ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Person
+                              ] ;
+              opla:isNativeTo "https://enslaved.org/ontology/PersonRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/PersonStatusRecord
+:PersonStatusRecord rdf:type owl:Class ;
+                    rdfs:subClassOf :AgentRecord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasStatusGeneratedEvent ;
+                                      owl:allValuesFrom :Event
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasValue ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :PSCategories
+                                    ] ;
+                    opla:isNativeTo "https://enslaved.org/ontology/PersonStatusRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf :EntityWithProvenance ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasBroader ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PlaceCV
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDescriptionText ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Description
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isAdministrativePartOf ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PlaceCV
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isSpatiallyLocatedIn ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Place
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isSpatiallyLocatedIn ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PlaceCV
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPlaceTypeCV ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PlaceTypeCV
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSpatialExtent ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :SpatialExtent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTemporalExtent ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :TemporalExtent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAlternateName ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasName ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ;
+       opla:isNativeTo "https://enslaved.org/ontology/Place"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/PlaceCV
+:PlaceCV rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasBroader ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :PlaceCV
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDescriptionText ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Description
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isAdministrativePartOf ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :PlaceCV
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isSpatiallyLocatedIn ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :PlaceCV
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPlaceTypeCV ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :PlaceTypeCV
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlternateName ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasName ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] .
+
+
+###  https://enslaved.org/ontology/PlaceTypeCV
+:PlaceTypeCV rdf:type owl:Class .
+
+
+###  https://enslaved.org/ontology/ProvenanceActivity
+:ProvenanceActivity rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :performedBy ;
+                                      owl:allValuesFrom :Agent
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :used ;
+                                      owl:allValuesFrom :EntityWithProvenance
+                                    ] ;
+                    opla:isNativeTo "https://enslaved.org/ontology/EntityWithProvenance"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/RaceRecord
+:RaceRecord rdf:type owl:Class ;
+            rdfs:subClassOf :AgentRecord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :asText ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ;
+            opla:isNativeTo "https://enslaved.org/ontology/RaceRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ResearchProject
+:ResearchProject rdf:type owl:Class ;
+                 rdfs:subClassOf :Event ,
+                                 :ProvenanceActivity ;
+                 opla:isNativeTo "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ResearchProjectContributorRole
+:ResearchProjectContributorRole rdf:type owl:Class ;
+                                rdfs:subClassOf :Researcher ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty [ owl:inverseOf :providesParticipantRole
+                                                                 ] ;
+                                                  owl:allValuesFrom :ResearchProject
+                                                ] ;
+                                opla:isNativeTo "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/ResearchProjectPIRole
+:ResearchProjectPIRole rdf:type owl:Class ;
+                       rdfs:subClassOf :Researcher ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf :providesParticipantRole
+                                                        ] ;
+                                         owl:allValuesFrom :ResearchProject
+                                       ] ;
+                       opla:isNativeTo "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/Researcher
+:Researcher rdf:type owl:Class ;
+            opla:isNativeTo "https://enslaved.org/ontology/ResearchProject"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/SexRecord
+:SexRecord rdf:type owl:Class ;
+           rdfs:subClassOf :AgentRecord ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasValue ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :SexTypes
+                           ] ;
+           opla:isNativeTo "https://enslaved.org/ontology/SexRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/SexTypes
+:SexTypes rdf:type owl:Class ;
+          opla:isNativeTo "https://enslaved.org/ontology/SexRecord"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/SpatialExtent
+:SpatialExtent rdf:type owl:Class .
+
+
+###  https://enslaved.org/ontology/TemporalExtent
+:TemporalExtent rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :fallsWithin ;
+                                  owl:allValuesFrom :TimeSpan
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :contains ;
+                                  owl:allValuesFrom xsd:date
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :endsAt ;
+                                  owl:allValuesFrom xsd:date
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :occursAfter ;
+                                  owl:allValuesFrom xsd:date
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :occursBefore ;
+                                  owl:allValuesFrom xsd:date
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :startsAt ;
+                                  owl:allValuesFrom xsd:date
+                                ] ;
+                opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+###  https://enslaved.org/ontology/TimeSpan
+:TimeSpan rdf:type owl:Class ;
+          rdfs:subClassOf :TemporalExtent ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :endsAt ;
+                            owl:someValuesFrom xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :startsAt ;
+                            owl:someValuesFrom xsd:date
+                          ] ;
+          opla:isNativeTo "https://enslaved.org/ontology/TemporalExtent"^^rdfs:Literal .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Class ;
+  owl:complementOf :Person ;
+  rdfs:subClassOf [ rdf:type owl:Class ;
+                    owl:complementOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasAgentRecord ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :AgeRecord
+                                                                         :OccupationRecord
+                                                                         :OriginRecord
+                                                                         :PersonStatusRecord
+                                                                         :RaceRecord
+                                                                         :SexRecord
+                                                                       )
+                                                         ]
+                                     ]
+                  ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :fallsWithin ;
+  owl:someValuesFrom :TimeSpan ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :generatedBy ;
+  owl:someValuesFrom :ProvenanceActivity ;
+  rdfs:subClassOf :EntityWithProvenance
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasAgentRecord ;
+  owl:someValuesFrom owl:Thing ;
+  rdfs:subClassOf :Agent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasEventType ;
+  owl:someValuesFrom :EventTypes ;
+  rdfs:subClassOf :Event
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasInterAgentRelationshipType ;
+  owl:someValuesFrom :InterAgentRelationshipTypes ;
+  rdfs:subClassOf :InterAgentRelationshipRecord
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasOriginalSourceType ;
+  owl:someValuesFrom :DocumentTypes ;
+  rdfs:subClassOf :EntityWithProvenance
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasParticipantRoleType ;
+  owl:someValuesFrom :ParticipantRoleTypes ;
+  rdfs:subClassOf :ParticipantRoleRecord
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasStatusGeneratedEvent ;
+  owl:someValuesFrom :Event ;
+  rdfs:subClassOf :PersonStatusRecord
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :isRelationshipFrom ;
+  owl:someValuesFrom :Agent ;
+  rdfs:subClassOf :InterAgentRelationshipRecord
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :isRelationshipTo ;
+  owl:someValuesFrom :Agent ;
+  rdfs:subClassOf :InterAgentRelationshipRecord
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :performedBy ;
+  owl:someValuesFrom :Agent ;
+  rdfs:subClassOf :ProvenanceActivity
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :subeventOf ;
+  owl:someValuesFrom :Event ;
+  rdfs:subClassOf :Event
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :used ;
+  owl:someValuesFrom :EntityWithProvenance ;
+  rdfs:subClassOf :ProvenanceActivity
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :contains ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :endsAt ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :occursAfter ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :occursBefore ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :startsAt ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf :TemporalExtent
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

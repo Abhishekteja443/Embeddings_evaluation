@@ -1,0 +1,26 @@
+What are all the enslaved people in County X in the century X?
+What are all the enslaved individuals categorized by gender, ethnicity, and location (e.g., on plantation X or of XXXX ethnicity)?
+What are all the available population counts of enslaved people by place and year?
+What are all the documented literacy statuses of enslaved individuals?
+What are all the geographical places associated with enslaved people and their relationships to those places?
+What are all the common names of enslaved children during the Revolutionary War era?
+
+What are all the enslaved individuals and who enslaved them, including locations?
+Who are all the children associated with enslaved individuals?
+What are all the available records about individuals identified as enslaved or formerly enslaved in specific locations and periods?
+What are all the enslaved children recorded in specific locations and time periods?
+What are all the enslaved people associated with a specific owner in a specific place and time, and how many were there?
+What are all the enslaved individuals who contributed labor to construction projects, such as the state capitol, and what were their roles?
+What are all the known addresses or properties that were inhabited by enslaved individuals?
+What are all the enslaved individuals transported from specific ports and their demographic breakdowns over time?
+What are all the known slave rebellions, their participants, locations, and dates?
+
+What are all the known relatives of enslaved individuals, including their relationships and locations?
+What are all the median ages of enslaved individuals who escaped in location X during time period X?
+What are all the average ages at death of enslaved individuals?
+What are all the documented skill categories associated with enslaved individuals, broken down by ethnic group, and their percentages?
+What are all the recorded marriage events between enslaved individuals, categorized by same or different ethnic groupings, and their percentages?
+What are all the known economic values assigned to enslaved individuals, categorized by ethnicity, skills, gender, and period?
+What are all the life outcomes (e.g., sale, manumission, death) of enslaved individuals disembarked from ship XXX?
+What are all the enslaved individuals who lived in location X in the time period XXX?
+What are all the enslaved individuals who were later recorded as slave owners, including details of their ownership activities?
