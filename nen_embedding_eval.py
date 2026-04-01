@@ -1,24 +1,3 @@
-"""
-NEN Schema Embedding Evaluation
-================================
-Models tested:
-  - Qwen/Qwen3-Embedding-8B
-  - nvidia/llama-embed-nemotron-8b
-  - BAAI/bge-large-en-v1.5
-
-Approach:
-  1. Convert NEN triples → natural language sentences
-  2. Embed with each model
-  3. Evaluate using Competency Questions (CQs) derived from the schema
-  4. Metrics: Cosine Similarity, Hit@K (K=1,3,5), MRR
-
-Requirements (install before running):
-  pip install torch transformers sentence-transformers pandas numpy scikit-learn tabulate tqdm
-  # For Qwen3 & Nemotron (large models ~16GB each), ensure you have enough RAM/VRAM
-  # or use quantized versions via bitsandbytes:
-  pip install bitsandbytes accelerate
-"""
-
 import os
 import time
 import warnings
